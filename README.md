@@ -11,6 +11,7 @@
     - Typescript
     - npm
 3. Steps to run
+
     *** NPM ***
     - run the following command inside project folder: `npm run start`;
     - This will start the project and you can check on browser http://localhost:3000/.
