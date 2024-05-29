@@ -34,6 +34,7 @@ function Logo() {
     if (firstName && lastName) {
       checkSymbols();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [firstName, lastName]);
   
   return (
