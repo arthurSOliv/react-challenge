@@ -1,12 +1,22 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { updateFirstName, updateLastName } from '../../store/actions';
 import '../../App.css';
 
 function Form() {
-  const [firstName, setFirstName] = useState('Breaking');
+  const [firstName, setFistName] = useState('Breaking');
   const [lastName, setLastName] = useState('Bad');
 
+  const dispatch = useDispatch();
+
+  const handleBreakify = (e: any) => {
+    e.preventDefault();
+    dispatch(updateFirstName(firstName));
+    dispatch(updateLastName(lastName));
+  }
+
   return (
-    <form className="w-full max-w-md" onSubmit={(e) => {e.preventDefault(); console.log("submit");}}>
+    <form className="w-full max-w-md" onSubmit={handleBreakify}>
         <div className="flex justify-between mb-4 px-4">
             <div className="w-1/2 mr-2">
                 <label htmlFor="firstName" className="block text-white mb-1">First Name</label>
@@ -14,7 +24,7 @@ function Form() {
                     type="text"
                     id="firstName"
                     value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    onChange={(e) => setFistName(e.target.value)}
                     placeholder=""
                     className="bg-gray text-black p-2 rounded w-full"
                 />
