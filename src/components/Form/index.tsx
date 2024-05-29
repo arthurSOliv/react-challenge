@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { updateFirstName, updateLastName } from '../../store/actions';
+
+import { capitalizeFirstLetter } from '../../utils/strings';
+
 import '../../App.css';
 
 function Form() {
@@ -11,8 +14,8 @@ function Form() {
 
   const handleBreakify = (e: any) => {// eslint-disable-line @typescript-eslint/no-explicit-any
     e.preventDefault();
-    dispatch(updateFirstName(firstName));
-    dispatch(updateLastName(lastName));
+    dispatch(updateFirstName(capitalizeFirstLetter(firstName)));
+    dispatch(updateLastName(capitalizeFirstLetter(lastName)));
   }
 
   return (

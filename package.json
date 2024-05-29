@@ -55,6 +55,7 @@
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
     "eslint": "^8.57.0",
+    "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.34.2",
     "globals": "^15.3.0",
     "typescript-eslint": "^7.11.0"
