@@ -9,7 +9,7 @@ function Form() {
 
   const dispatch = useDispatch();
 
-  const handleBreakify = (e: any) => {
+  const handleBreakify = (e: any) => {// eslint-disable-line @typescript-eslint/no-explicit-any
     e.preventDefault();
     dispatch(updateFirstName(firstName));
     dispatch(updateLastName(lastName));
